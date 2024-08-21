@@ -1,0 +1,155 @@
+/* inspired by...
+https://codepen.io/roydigerhund/pen/JGmvaE */
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	height: 400px;
+	margin-top: -200px;
+	margin-left: -200px;
+	border-radius: 20px;
+	/* offset-x | offset-y | blur-radius | spread-radius | color */
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.2);
+	overflow: hidden;
+	background: #00d2ff;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left top, #aa7bf5, #00d2ff);
+	/*background: linear-gradient(to left top, #aa7bf5, #00d2ff); */
+	/*background: linear-gradient(to right top, #00d2ff, #3a7bd5);*/
+	background: linear-gradient(to right top, #c21500, #ffc500);
+	color: #fff;
+	font-family: 'Courier New', 'Open Sans', 'Helvetica', sans-serif;
+}
+
+.center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.number {
+	position: relative;
+	height: 150px;
+	width: 300px;
+}
+
+.one-top {
+	z-index: 3;
+	position: absolute;
+	top: 17px;
+	left: 23px;
+	height: 60px;
+	width: 30px;
+	background: #fff;
+	border-radius: 3px;
+	transform: rotate(45deg);
+	/* offset-x | offset-y | blur-radius | spread-radius | color */
+	box-shadow: 0 0 13px 0 rgba(0,0,0,0.2);
+}
+
+.one-body {
+	z-index: 4;
+	position: absolute;
+	top: 15px;
+	left: 47px;
+	height: 120px;
+	width: 32px;
+	background: #fff;
+	border-radius: 3px;
+	box-shadow: 0 0 13px 0 rgba(0,0,0,0.2);
+}
+
+
+.zero-one, .zero-two {
+	z-index: 2;
+	position: absolute;
+	top: 15px;
+	left: 73px;
+	box-sizing: border-box;
+	height: 120px;
+	width: 110px;
+	border-radius: 50%;
+	border: 30px solid #fff;
+	box-shadow: 0 0 13px 0 rgba(0,0,0,0.2);
+}
+
+.zero-two {
+	z-index: 1;
+	left: 170px;
+}
+
+.big {
+	position: relative;
+	z-index: 10;
+	display: block;
+	line-height: 105px;
+	padding: 0;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 123px;
+	font-weight: 700;
+}
+
+.small {
+	position: relative;
+	z-index: 10;
+	display: block;
+	line-height: 45px;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 34.5px;
+	font-weight: 700;
+	letter-spacing: .04em;
+}
+
+
+@media only screen and (max-width: 699px) {
+    .frame {
+        width: 58vw;
+		height: 58vw;
+		margin-top: -29vw;
+		margin-left: -29vw;
+}
+	
+	.number {
+		height: 21.43vw;
+		width: 42.85vw;
+	}
+	
+	.one-top{
+		top: 2.43vw;
+		left: 3.28vw;
+		height: 8.57vw;
+		width: 4.28vw;
+	}
+	.one-body{
+		top: 2.14vw;
+		left: 6.71vw;
+		height: 17.14vw;
+		width: 4.57vw;
+	}
+	.zero-one, .zero-two {
+		top: 2.14vw;
+		left: 10.43vw;
+		height: 17.14vw;
+		width: 15.71vw;
+		border: 4.28vw solid #fff;
+	}
+	.zero-two{
+		left: 24.28vw;
+	}
+
+	.big {
+		font-size: 17.57vw;
+		line-height: 15vw;
+	}
+
+	.small {
+		font-size: 4.93vw;
+		line-height: 6.43vw;
+	}
+}
